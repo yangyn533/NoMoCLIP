@@ -52,9 +52,9 @@ python instinct_inf.py \
   --set_path <PATH_TO_YOUR_INTERMEDIATE_OUTPUT_DIRECTORY> \
   --out_path <PATH_TO_YOUR_OUTPUT_DIRECTORY> \
   --method_path <PATH_TO_YOUR_CORAIN_DIRECTORY> \ 
-  --n 2
+  --num 2
 ```
-**Note:** The argument `--n` should be tested with all values in `[2, 3, 5, 7, 10]`.
+**Note:** The argument `--num` should be tested with all values in `[2, 3, 5, 7, 10]`.
 
 ## :four: Training Process
 ```
