@@ -105,7 +105,7 @@ python structure_motifs.py \
 ## 📊 High attention regions
 
 ```
-python high_attention.py \
+python high_attention_region.py \
   --set_path <PATH_TO_YOUR_FEATURE_DIRECTORY> \
   --out_path <PATH_TO_YOUR_OUTPUT_DIRECTORY> \
   --model_path <PATH_TO_YOUR_MODEL> \
