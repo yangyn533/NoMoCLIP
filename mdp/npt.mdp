@@ -1,0 +1,61 @@
+; NVT equilibration parameters
+
+define                   = -DPOSRES        ; position restrain the heavy atoms
+
+; Run parameters
+integrator               = md              ; leap-frog integrator
+dt                       = 0.002           ; 2 fs time step
+nsteps                   = 500000          ; 2 fs * 500000 = 1000 ps = 1 ns of simulation
+
+; Output control
+nstxout                  = 5000            ; save coordinates every 10 ps
+nstvout                  = 5000            ; save velocities every 10 ps
+nstenergy                = 5000            ; save energies every 10 ps
+nstlog                   = 5000            ; update log every 10 ps
+
+; Bond parameters
+continuation             = yes            ; continuing from NVT
+constraint_algorithm     = LINCS          ; holonomic constraints
+constraints              = h-bonds        ; bonds to H are constrained
+lincs_iter               = 1              ; accuracy of LINCS
+lincs_order              = 4              ; also related to accuracy
+
+; Neighbor searching and vdW
+cutoff-scheme           = Verlet
+ns_type                 = grid      ; search neighboring grid cells
+nstlist                 = 20        ; largely irrelevant with Verlet
+rlist                   = 1.2
+vdwtype                 = Cut-off
+vdw-modifier            = Potential-switch
+rvdw-switch             = 1.0
+rvdw                    = 1.2       ; short-range van der Waals cutoff (in nm)
+
+; Electrostatics
+coulombtype             = PME       ; Particle Mesh Ewald for long-range electrostatics
+rcoulomb                = 1.2       ; short-range electrostatic cutoff (in nm)
+pme_order               = 4         ; cubic interpolation
+fourierspacing          = 0.16      ; grid spacing for FFT
+
+; Temperature coupling
+tcoupl                  = V-rescale                     ; modified Berendsen thermostat
+tc-grps                 = Protein RNA Water_and_ions      ; three coupling groups
+tau_t                   = 0.1   0.1   0.1                 ; time constant, in ps
+ref_t                   = 300   300   300                 ; reference temperature, one for each group, in K
+
+; Pressure coupling
+pcoupl                  = Parrinello-Rahman     ; Pressure coupling on in NPT
+pcoupltype              = isotropic             ; uniform scaling of box vectors
+tau_p                   = 2.0                   ; time constant, in ps
+ref_p                   = 1.0                   ; reference pressure, in bar
+compressibility         = 4.5e-5                ; isothermal compressibility of water, bar^-1
+refcoord_scaling        = com
+
+; Periodic boundary conditions
+pbc                     = xyz
+
+; Dispersion correction
+DispCorr                = no 	    ; account for cut-off vdW scheme
+
+; Velocity generation
+gen_vel                 = no        ; Velocity generation is off
+
