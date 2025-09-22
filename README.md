@@ -27,7 +27,7 @@ python position_inf.py  --set_path <PATH_TO_YOUR_DATA>  --out_path <PATH_TO_YOUR
 #### 2.2 Structural encoding
 This feature requires the **RNAplfold** tool, which is executed in a **Python 2.7 environment**.
 ```
-python secondary.py  --set_path <PATH_TO_YOUR_DATA>  --out_path <PATH_TO_YOUR_OUTPUT_DIRECTORY>
+python structure_inf.py  --set_path <PATH_TO_YOUR_DATA>  --out_path <PATH_TO_YOUR_OUTPUT_DIRECTORY>
 ```
 
 #### 2.3 Semantic encoding
@@ -111,4 +111,5 @@ python high_attention.py \
   --model_path <PATH_TO_YOUR_MODEL> \
   --gpu_id 1
 ```
-
+## Contact
+Thank you and enjoy the tool! If you have any suggestions or questions, please email me at [*yangyn533@nenu.edu.cn*](mailto:yangyn533@nenu.edu.cn)*.*
