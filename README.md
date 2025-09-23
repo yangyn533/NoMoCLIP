@@ -33,7 +33,7 @@ python structure_inf.py  --set_path <PATH_TO_YOUR_DATA>  --out_path <PATH_TO_YOU
 #### 3.3 Semantic encoding
 ```
 python attention_graph.py \
-  --kmer 1
+  --kmer 1 \
   --set_path <PATH_TO_YOUR_DATA> \
   --out_path <PATH_TO_YOUR_OUTPUT_DIRECTORY> \
   --model_type <PATH_TO_YOUR_NLP_MODEL> \ 
@@ -86,7 +86,7 @@ python seq_motifs.py \
   --out_path <PATH_TO_YOUR_OUTPUT_DIRECTORY> \
   --model_path <PATH_TO_YOUR_MODEL> \
   --pwm_path <PATH_TO_YOUR_PWM_FILE> \
-  --motif_size 7
+  --motif_size 7 \
   --gpu_id 1
 ```
 
@@ -98,7 +98,7 @@ python structure_motifs.py \
   --set_path <PATH_TO_YOUR_FEATURE_DIRECTORY> \
   --out_path <PATH_TO_YOUR_OUTPUT_DIRECTORY> \
   --model_path <PATH_TO_YOUR_MODEL> \
-  --motif_size 7
+  --motif_size 7 \
   --gpu_id 1
 ```
 
