@@ -5,12 +5,12 @@ Interpretable Modeling of RNA–Protein Interactions from eCLIP‑Seq Profiles f
 [NoMoCLIP_dataset](https://doi.org/10.6084/m9.figshare.26082916.v1)
 
 ## :two: Environment Setup
-#### 1.1 Create and activate a new virtual environment
+#### 2.1 Create and activate a new virtual environment
 ```
 conda create -n NoMoCLIP python=3.7.16 
 conda activate NoMoCLIP
 ```
-#### 1.2 Install the package and other requirements
+#### 2.2 Install the package and other requirements
 ```
 git clone https://github.com/yangyn533/NoMoCLIP
 cd NoMoCLIP
@@ -19,18 +19,18 @@ python3 -m pip install -r requirements.txt
 ```
 ## :three: Process data
 
-#### 2.1 Sequential encoding
+#### 3.1 Sequential encoding
 ```
 python position_inf.py  --set_path <PATH_TO_YOUR_DATA>  --out_path <PATH_TO_YOUR_OUTPUT_DIRECTORY>
 ```
 
-#### 2.2 Structural encoding
+#### 3.2 Structural encoding
 This feature requires the **RNAplfold** tool, which is executed in a **Python 2.7 environment**.
 ```
 python structure_inf.py  --set_path <PATH_TO_YOUR_DATA>  --out_path <PATH_TO_YOUR_OUTPUT_DIRECTORY>
 ```
 
-#### 2.3 Semantic encoding
+#### 3.3 Semantic encoding
 ```
 python attention_graph.py \
   --kmer 1
@@ -42,7 +42,7 @@ python attention_graph.py \
   --device1 cuda:1 \
   --device2 cuda:1 
 ```
-#### 2.4 Functional properties
+#### 3.4 Functional properties
 
 For this feature, you need to use the [corain](https://github.com/idrblab/corain?tab=readme-ov-file#requirements-and-installment). 
 
@@ -77,7 +77,7 @@ python model_predict.py \
 
 Motif extraction requires the installation of the **[MEME Suite](https://meme-suite.org/meme/doc/download.html)** package.
 
-#### 5.1 Sequential motifs
+#### 6.1 Sequential motifs
 
 ```
 python seq_motifs.py \
@@ -90,7 +90,7 @@ python seq_motifs.py \
   --gpu_id 1
 ```
 
-#### 5.2 Structural motifs
+#### 6.2 Structural motifs
 
 ```
 python structure_motifs.py \
