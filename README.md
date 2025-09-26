@@ -2,7 +2,7 @@
 Interpretable Modeling of RNA–Protein Interactions from eCLIP‑Seq Profiles for Motif‑Free RBPs
 # ![image](https://github.com/yangyn533/NoMoCLIP/blob/main/NoMoCLIP.png)
 ## :one: Data availability
-[NoMoCLIP_dataset](https://doi.org/10.6084/m9.figshare.26082916.v1)
+[NoMoCLIP_dataset](https://figshare.com/articles/dataset/NoMoCLIP_dataset_availability/30178051)
 
 ## :two: Environment Setup
 #### 2.1 Create and activate a new virtual environment
