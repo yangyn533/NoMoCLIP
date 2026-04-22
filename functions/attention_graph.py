@@ -112,7 +112,7 @@ def GraphData(filepath, args):
     adjacency_matrix_inf_np = adjacency_matrix.detach().cpu().numpy()
     for each_item in range(adjacency_matrix_inf_np.shape[0]):
         ori_matrix = adjacency_matrix_inf_np[each_item]
-        zomatrix = np.double(ori_matrix < np.mean(ori_matrix))
+        zomatrix = np.double(ori_matrix > np.mean(ori_matrix))
         diag_indices = np.diag_indices_from(zomatrix)
         zomatrix[diag_indices] = 0        
         final_matrix.append(zomatrix)
